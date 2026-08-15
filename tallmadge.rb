@@ -1,8 +1,8 @@
 class Tallmadge < Formula
   desc "CLI manager for ~/.agents/ and AI coding harness extensions"
   homepage "https://github.com/kplawver/tallmadge"
-  url "https://github.com/kplawver/tallmadge/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "<SHA256_OF_RELEASE_TARBALL>"
+  url "https://github.com/kplawver/tallmadge/archive/refs/tags/0.1.0.tar.gz"
+  sha256 "b27a39ff9c7063b65072b9dc6d533f48445dcf9d54f01746c1e8f25282695598"
   license "MIT"
 
   depends_on "ruby"
@@ -10,12 +10,12 @@ class Tallmadge < Formula
 
   resource "rainbow" do
     url "https://rubygems.org/downloads/rainbow-3.1.1.gem"
-    sha256 "<SHA256_OF_RAINBOW_GEM>"
+    sha256 "039491aa3a89f42efa1d6dec2fc4e62ede96eb6acd95e52f1ad581182b79bc6a"
   end
 
   resource "thor" do
     url "https://rubygems.org/downloads/thor-1.5.0.gem"
-    sha256 "<SHA256_OF_THOR_GEM>"
+    sha256 "e3a9e55fe857e44859ce104a84675ab6e8cd59c650a49106a05f55f136425e73"
   end
 
   def install
