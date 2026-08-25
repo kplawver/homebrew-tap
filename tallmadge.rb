@@ -1,8 +1,8 @@
 class Tallmadge < Formula
   desc "CLI manager for ~/.agents/ and AI coding harness extensions"
   homepage "https://github.com/kplawver/tallmadge"
-  url "https://github.com/kplawver/tallmadge/archive/refs/tags/0.3.0.tar.gz"
-  sha256 "792cf50e2bc4ba9eb99defe041b5431cafc5ffaf23637d7a8d3637a664b4d69a"
+  url "https://github.com/kplawver/tallmadge/archive/refs/tags/0.4.0.tar.gz"
+  sha256 "b36f060565d3a0f1eb545b4dee481e824e3a95cca59531f21e49a0d949bdb0f3"
   license "MIT"
 
   depends_on "ruby"
