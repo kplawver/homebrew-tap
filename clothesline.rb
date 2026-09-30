@@ -1,8 +1,8 @@
 class Clothesline < Formula
   desc "Local shared memory for coding agents"
   homepage "https://github.com/kplawver/clothesline"
-  url "https://github.com/kplawver/clothesline/archive/refs/tags/v0.4.0.tar.gz"
-  sha256 "b32c40058edb2e58e3d2adfa74583d63a1b99fafa6f0730d1e790e4e1fa76a73"
+  url "https://github.com/kplawver/clothesline/archive/refs/tags/v0.5.0.tar.gz"
+  sha256 "825048b3fa3480badd60831a251469d215fbddbcff9a541f019f5c60388d522f"
   license "MIT"
 
   depends_on "llama.cpp"
