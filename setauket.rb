@@ -1,10 +1,11 @@
-class Clothesline < Formula
-  desc "Durable local messaging between coding agents"
-  homepage "https://github.com/kplawver/clothesline"
-  url "https://github.com/kplawver/clothesline/archive/refs/tags/v0.7.0.tar.gz"
-  sha256 "533b46aab621d1eb73a8bfbd6036d5ee01eaa4a884c728dc86b982a381de9b34"
+class Setauket < Formula
+  desc "Local cross-harness context storage for coding agents"
+  homepage "https://github.com/kplawver/setauket"
+  url "https://github.com/kplawver/setauket/archive/refs/tags/v0.7.0.tar.gz"
+  sha256 "e0bf22998e4be7a86849cabb2881cda54503181a415ef59e859ca57f84de686e"
   license "MIT"
 
+  depends_on "llama.cpp"
   depends_on "python@3.12"
   depends_on "uv"
 
@@ -12,11 +13,11 @@ class Clothesline < Formula
     libexec.install "pyproject.toml", "uv.lock", "src"
     # Install native wheels after Homebrew's binary relocation pass; upstream
     # wheel dylib headers do not have the padding Homebrew needs to rewrite IDs.
-    (bin/"clothesline").write <<~SH
+    (bin/"setauket").write <<~SH
       #!/bin/sh
-      exec "#{opt_libexec}/.venv/bin/clothesline" "$@"
+      exec "#{opt_libexec}/.venv/bin/setauket" "$@"
     SH
-    chmod 0755, bin/"clothesline"
+    chmod 0755, bin/"setauket"
   end
 
   post_install_steps do
@@ -29,14 +30,14 @@ class Clothesline < Formula
   end
 
   service do
-    run [opt_bin/"clothesline", "serve"]
-    environment_variables PATH: "#{HOMEBREW_PREFIX}/bin:/usr/bin:/bin"
+    run [opt_bin/"setauket", "serve"]
+    environment_variables PATH: "#{formula_opt_bin("llama.cpp")}:#{HOMEBREW_PREFIX}/bin:/usr/bin:/bin"
     keep_alive true
-    log_path var/"log/clothesline.log"
-    error_log_path var/"log/clothesline.err.log"
+    log_path var/"log/setauket.log"
+    error_log_path var/"log/setauket.err.log"
   end
 
   test do
-    assert_match "usage: clothesline", shell_output("#{bin}/clothesline --help")
+    assert_match "usage: setauket", shell_output("#{bin}/setauket --help")
   end
 end
