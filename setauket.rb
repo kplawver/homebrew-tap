@@ -1,8 +1,8 @@
 class Setauket < Formula
   desc "Local cross-harness context storage for coding agents"
   homepage "https://github.com/kplawver/setauket"
-  url "https://github.com/kplawver/setauket/archive/refs/tags/v0.7.2.tar.gz"
-  sha256 "7176a403e86ed23fd281c07f9cef03895858162872acbb5704d488c97b3c1854"
+  url "https://github.com/kplawver/setauket/archive/refs/tags/v0.8.0.tar.gz"
+  sha256 "e108b0eb25c51fa59428d8d2d2da071378030d1b64b2985630ad80ada91a5021"
   license "MIT"
 
   depends_on "llama.cpp"
