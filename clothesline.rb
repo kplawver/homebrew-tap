@@ -1,8 +1,8 @@
 class Clothesline < Formula
   desc "Durable local messaging between coding agents"
   homepage "https://github.com/kplawver/clothesline"
-  url "https://github.com/kplawver/clothesline/archive/refs/tags/0.8.0.tar.gz"
-  sha256 "d659479ef74759371b2a3aad4c7387db45f19686d4b88f52546e5d451ff24188"
+  url "https://github.com/kplawver/clothesline/archive/refs/tags/0.9.0.tar.gz"
+  sha256 "366b3cfde3cd932fa1c6e6b2aff2854296544f881762ee0cb210f6bce202cb31"
   license "MIT"
 
   depends_on "python@3.12"
